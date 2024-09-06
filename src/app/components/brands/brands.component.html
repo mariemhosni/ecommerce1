@@ -1,0 +1,28 @@
+<section class="p-4 shadow my-2 text-center w-90 mx-auto">
+
+<h2 class="h4 text-center text-main  my-2 ">All Brands :</h2>
+
+<div class="row ">
+
+@for (brand of brandsList(); track $index) {
+<div class="col-md-3 border rounded-2">
+<div class="cursor-pointer" [routerLink]="['/specificBrand', brand._id]">
+    <img [src]="brand.image" alt="">
+</div>
+
+
+</div>
+
+
+}
+
+
+
+
+
+    
+</div>
+
+
+
+</section>

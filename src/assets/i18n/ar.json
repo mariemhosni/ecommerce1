@@ -1,0 +1,20 @@
+{
+    "navbar":{
+       "home" : "الرئيسية",
+       "products" :"المنتجات",
+       "categories" : "الاقسام",
+       "brands" : "العلامات التجاريه",
+       "signout" : "تسجيل الخروج",
+       "lang" :"اللغه"
+    },
+    
+    
+ "Categories":{
+   "popular categories":"الاقسام الشائعه"
+ },
+ 
+"products":{
+"popular product": "المنتجات الاكثر مبيعا "
+}
+   
+}

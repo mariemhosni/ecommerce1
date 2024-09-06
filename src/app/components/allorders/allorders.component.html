@@ -1,0 +1,43 @@
+    
+    <section class="my-3 bg-main-light p-4 rounded-3 mx-auto w-75 my-5">
+
+
+        <h1 class="text-center text-main"> User Orders </h1>
+    
+    
+    
+        <div class="row">
+    
+        
+          
+            @for (order of allorders ; track $index) {
+<div class="col-md-12 my-4" >
+<div class="p-1 text-center">
+    
+                 <h4 class="h5 text-muted"><span class="text-main">isPaid</span>  :  {{ order.isPaid }} </h4>
+                      
+                <h2 class="h5 my-4 text-muted"><span class="text-main">payment Method Type :</span>{{ order.paymentMethodType}}</h2>
+    
+                <h3 class="h5 text-muted"><span class="text-main">Total Order Price :</span>  {{ order.totalOrderPrice }} </h3>
+    
+            </div>
+    
+    
+    
+        </div>
+    
+    
+            }
+         
+            
+    
+        </div>
+    
+    
+    
+    </section> 
+            
+
+                
+
+

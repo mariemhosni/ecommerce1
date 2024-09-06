@@ -1,0 +1,49 @@
+@if (wishList) {
+
+    <section class="w-90 mx-auto" >
+    <h2 class="h4 text-center text-main  my-4 ">WishList :</h2>
+    
+    <div class="row gx-1 gy-2 justify-content-center">
+
+    @for (product of wishList ; track product._id) {
+    
+        <div class="col-md-2 ">
+    
+            <div class="product p-1 cursor-pointer">
+                <button class="small btn p-0 my-2 mx-auto w-100" (click)="removeFromWhishlist(product._id)" > <i class="fa-regular fa-trash-can text-main "></i> Remove </button>
+
+               <div [routerLink]="['/details',  product._id]">
+                <img [src]="product.imageCover" class="w-100" [alt]="product.title">
+                <h3 class="small text-main">{{product.category.name |termText:2}}</h3>
+                <h4 class="small">{{product.title | termText: 2}}</h4>
+                <div class="d-flex justify-content-between align-items-center">
+               
+                    <span class="small">{{product.price }}EGP</span>
+                    <div  >
+    
+                      @for (num of [1,2,3,4,5].slice(0,product.ratingsAverage); track $index) {
+                    <span><i class="fas fa-star rating-color fs-8 "></i></span>
+                      }
+                      @if (product.ratingsAverage % 1 !== 0 ) {
+                       <i class="fa-solid fa-star-half-stroke rating-color fs-8"></i>
+     
+                      }
+                      <span class="text-muted fs-8">{{product.ratingsAverage}} </span>
+                    </div>
+                </div>
+               </div>
+                <button class="btn-main w-100 small " (click)="addToCart(product._id)">Add To Cart</button>
+            </div>
+    
+        </div>
+    }
+    
+    </div>
+
+    </section>
+}
+
+
+
+
+
